@@ -1,0 +1,7 @@
+from PIL import Image
+
+im_file=r"inputs/Chrysanthemum.jpg"
+pdf_file=r"outputs/pdf_test.pdf"
+im=Image.open(im_file)
+print(im.mode)
+im.save(pdf_file,"PDF",resolution=10.0)
