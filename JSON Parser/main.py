@@ -1,4 +1,13 @@
-import parserJson as PJ
+temp='{ "quiz": { "sport": { "q1": { "question": "Which one is correct team name in NBA?", "options": [ "New York Bulls", "Los Angeles Kings", "Golden State Warriros", "Huston Rocket" ], "answer": "Huston Rocket" } }, "maths": { "q1": { "question": "5 + 7 = ?", "options": [ "10", "11", "12", "13" ], "answer": "12" }, "q2": { "question": "12 - 8 = ?", "options": [ "1", "2", "3", "4" ], "answer": "4" } } } }'
+import json
 
-obj=PJ.parserJson()
-obj.print_json()
+# data=json.loads(temp)
+# #print(data)
+
+# print(data["quiz"]["sport"])
+#--------------------------------------
+
+with open('G:\JSON Parser\input.json') as json_data:
+    data=json.load(json_data)
+    json_data.close()
+print(data["glossary"])
